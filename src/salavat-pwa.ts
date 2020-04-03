@@ -6,6 +6,7 @@ import { Drawer } from '@material/mwc-drawer';
 
 import './director';
 import './stuff/curve-slider';
+import './stuff/salavat-counter';
 import { BaseElement } from './stuff/base-element';
 import { chatRoom } from './stuff/chat-room';
 import { styleConfig } from './config';
@@ -45,6 +46,12 @@ export class SalavatPWA extends BaseElement {
           </div>
           <curve-slider></curve-slider>
           <main role="main">
+            <salavat-counter
+              .value="${Math.floor(Math.random()*1_000_000)}"
+              label-first="تا این‌لحظه"
+              label-end="صلوات نذر شده"
+            >
+            </salavat-counter>
           </main>
           <div class="footer-text"><span>Made with love</span>${heartIcon}</div>
           <mwc-icon-button class="get-app-button">${getAppIcon}</mwc-icon-button>
